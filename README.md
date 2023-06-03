@@ -1,2 +1,2 @@
-# treatments
-Treatments to improve Microsoft Windows
+# Glazer
+Tools & Utilities to improve Microsoft Windows
