@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Detect the current operating system
+if [[ "$(uname)" == "Darwin" ]]; then
+    echo "[run.sh] Mac OS X platform"
+    ./main.sh
+elif [[ "$(uname -s)" == Linux* ]]; then
+    echo "[run.sh] Linux platform"
+    ./main.sh
+elif [[ "$(uname -s)" == MINGW32_NT* ]]; then
+    echo "[run.sh] 32-bit Windows running within a POSIX compatibility layer (such as MSYS2)"
+    ./main.bat
+elif [[ "$(uname -s)" == MINGW64_NT* ]]; then
+    echo "[run.sh] 64-bit Windows running within a POSIX compatibility layer (such as MSYS2)"
+    ./main.bat
+fi
